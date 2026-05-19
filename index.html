@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>TRP | Luxury Streetwear</title>
+  <title>TRP | The Royal Priest</title>
 
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -95,6 +95,19 @@
       background: #5A189A;
       border-radius: 20px;
     }
+
+    /* INITIAL STATE */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+  }
+
+  /* WHEN VISIBLE */
+  .animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
   </style>
 </head>
 
@@ -123,23 +136,20 @@
       <!-- DESKTOP NAV -->
       <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-[3px]">
 
-        <a href="index.html" class="hover:text-[#C8A96B] transition duration-300">
+        <a href="index.html" class="text-[#C8A96B] transition duration-300">
           Home
         </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition duration-300">
+        <a href="shop_page.html" class="hover:text-[#C8A96B] transition duration-300">
           Shop
         </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition duration-300">
-          Collections
-        </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition duration-300">
+        <a href="explore.html" class="hover:text-[#C8A96B] transition duration-300">
           About
         </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition duration-300">
+        <a href="#Contacts" class="hover:text-[#C8A96B] transition duration-300">
           Contact
         </a>
 
@@ -167,23 +177,19 @@
 
       <div class="flex flex-col px-6 py-6 gap-6 uppercase tracking-[3px] text-sm">
 
-        <a href="index.html" class="hover:text-[#C8A96B] transition">
+        <a href="index.html" class="text-[#C8A96B] transition">
           Home
         </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition">
+        <a href="shop_page.html" class="hover:text-[#C8A96B] transition">
           Shop
         </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition">
-          Collections
-        </a>
-
-        <a href="#" class="hover:text-[#C8A96B] transition">
+        <a href="explore.html" class="hover:text-[#C8A96B] transition">
           About
         </a>
 
-        <a href="#" class="hover:text-[#C8A96B] transition">
+        <a href="#Contacts" class="hover:text-[#C8A96B] transition">
           Contact
         </a>
 
@@ -194,7 +200,7 @@
   </nav>
 
 <!-- HERO SECT-->
-  <section class="relative min-h-screen flex items-center px-5 md:px-8 pt-32 pb-20">
+  <section class="relative min-h-screen flex items-center px-5 md:px-8 pt-32 pb-20 ">
 
     <!-- PURPLE GLOW -->
     <div class="hero-glow top-20 right-[-100px]"></div>
@@ -233,13 +239,14 @@
 
           <!-- PRIMARY -->
           <button
+          onclick="window.location.href='shop_page.html'"
             class="cta-btn border border-[#5A189A] px-8 py-4 uppercase tracking-[3px] text-sm rounded-full purple-glow"
           >
             Shop Collection
           </button>
 
           <!-- SECONDARY -->
-          <button
+          <button  onclick="window.location.href='explore.html'"
             class="border border-[#C8A96B] px-8 py-4 uppercase tracking-[3px] text-sm rounded-full hover:bg-[#C8A96B] hover:text-black transition duration-300"
           >
             Explore Brand
@@ -286,7 +293,7 @@
   </section>
 
 <!-- BRAND STATEMENT -->
-  <section class="py-24 px-5 md:px-8 fade-up">
+  <section class="py-24 px-5 md:px-8 animate-on-scroll">
 
     <div class="max-w-5xl mx-auto text-center">
 
@@ -312,8 +319,8 @@
 
   </section>
 
-<!-- FEATURED CATEGORIES -->
-  <section class="py-20 px-5 md:px-8 fade-up">
+<!-- EXPLORE -->
+  <section class="py-20 px-5 md:px-8 animate-on-scroll">
 
     <div class="max-w-7xl mx-auto">
 
@@ -325,7 +332,7 @@
         </p>
 
         <h2 class="heading-font text-3xl sm:text-4xl md:text-5xl">
-          Shop By Category
+        Shop Collection
         </h2>
 
       </div>
@@ -333,7 +340,7 @@
       <!-- GRID -->
       <div class="grid md:grid-cols-3 gap-8">
 
-        <!-- CATEGORY 1 -->
+    <!-- CATEGORY 1 -->
         <div class="relative rounded-[30px] overflow-hidden h-[450px] group">
 
           <img
@@ -349,7 +356,8 @@
               Casuals Wears
             </h3>
 
-            <button class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
+            <button  onclick="window.location.href='shop_page.html#Casual'"
+            class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
               Explore
             </button>
 
@@ -357,11 +365,11 @@
 
         </div>
 
-        <!-- CATEGORY 2 -->
+    <!-- CATEGORY 2 -->
         <div class="relative rounded-[30px] overflow-hidden h-[450px] group">
 
           <img
-            src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=1200&auto=format&fit=crop"
+            src="Images/lbluebutdshirt.png"
             class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
           >
 
@@ -373,7 +381,8 @@
               Corporate Wears
             </h3>
 
-            <button class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
+            <button  onclick="window.location.href='shop_page.html#Corporate'"
+            class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
               Explore
             </button>
 
@@ -381,11 +390,11 @@
 
         </div>
 
-        <!-- CATEGORY 3 -->
+    <!-- CATEGORY 3 -->
         <div class="relative rounded-[30px] overflow-hidden h-[450px] group">
 
           <img
-            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop"
+            src="Images/blacksenatorwear2.png"
             class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
           >
 
@@ -394,10 +403,36 @@
           <div class="absolute bottom-10 left-8">
 
             <h3 class="heading-font text-3xl mb-3">
-              Traditional Wears
+              Native Wears
             </h3>
 
-            <button class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
+            <button  onclick="window.location.href='shop_page.html#Native'"
+            class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
+              Explore
+            </button>
+
+          </div>
+
+        </div>
+
+    <!-- CATEGORY 4 -->
+        <div class="relative rounded-[30px] overflow-hidden h-[450px] group">
+
+          <img
+            src="Images/handkie.png"
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+          <div class="absolute bottom-10 left-8">
+
+            <h3 class="heading-font text-3xl mb-3">
+              Clothing Accessories
+            </h3>
+
+            <button  onclick="window.location.href='shop_page.html#Accessories'"
+            class="border border-[#5A189A] px-6 py-3 rounded-full text-xs uppercase tracking-[3px] hover:bg-[#5A189A] transition">
               Explore
             </button>
 
@@ -411,8 +446,8 @@
 
   </section>
 
-<!-- FEATURED SECTION -->
-  <section class="py-24 px-5 md:px-8">
+<!-- LATEST COLLECTION -->
+  <section class="py-24 px-5 md:px-8 animate-on-scroll">
 
     <div class="max-w-7xl mx-auto">
 
@@ -443,11 +478,11 @@
           <div class="p-6">
 
             <h3 class="heading-font text-2xl mb-3">
-              ZIPT Tee
+              ZIPT Royal Tee
             </h3>
 
             <p class="text-gray-400 text-sm mb-6">
-              Premium zipper Tee.
+              Comfy Tee with center Zipper.
             </p>
 
             <div class="flex items-center justify-between">
@@ -481,7 +516,7 @@
             </h3>
 
             <p class="text-gray-400 text-sm mb-6">
-              Premium comfort.
+              Soft and Comfy Hoods.
             </p>
 
             <div class="flex items-center justify-between">
@@ -504,14 +539,14 @@
         <div class="bg-[#111111] border border-[#1f1f1f] rounded-[30px] overflow-hidden hover:border-[#5A189A] transition duration-500 hover:-translate-y-2">
 
           <img
-            src="......."
+            src="Images/pursenator3wear.png"
             class="w-full h-[350px] object-cover"
           >
 
           <div class="p-6">
 
             <h3 class="heading-font text-2xl mb-3">
-              native???
+              Purple Senator Native Wears
             </h3>
 
             <p class="text-gray-400 text-sm mb-6">
@@ -519,9 +554,8 @@
             </p>
 
             <div class="flex items-center justify-between">
-
               <span class="gold-text text-lg">
-                ₦95,000
+                ₦35,000
               </span>
 
               <button class="border border-[#5A189A] px-5 py-2 rounded-full text-xs uppercase tracking-[2px] hover:bg-[#5A189A] transition">
@@ -541,7 +575,7 @@
   </section>
 
     <!-- NEWSLETTER SECTION -->
-  <section class="relative py-24 px-5 md:px-8 bg-[#14051F] overflow-hidden">
+  <section class="relative py-24 px-5 md:px-8 bg-[#14051F] overflow-hidden animate-on-scroll">
 
     <!-- PURPLE GLOW -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#5A189A]/20 blur-[140px] rounded-full"></div>
@@ -595,7 +629,7 @@
 
 
 <!-- CONTACT SECTION -->
-<section id="Contacts" class="py-24 px-5 md:px-8 bg-[#0F0F0F] fade-up">
+<section id="Contacts" class="py-24 px-5 md:px-8 bg-[#0F0F0F] animate-on-scroll">
 
   <div class="max-w-6xl mx-auto">
 
@@ -654,7 +688,7 @@
             href="tel:+2348012345678"
             class="text-lg sm:text-xl hover:text-[#C8A96B] transition"
           >
-            +234 801 234 5678
+            +234 807 727 8398
           </a>
 
         </div>
@@ -763,15 +797,11 @@
               Home
             </a>
 
-            <a href="#" class="hover:text-[#C8A96B] transition">
+            <a href="shop_page.html" class="hover:text-[#C8A96B] transition">
               Shop
             </a>
 
-            <a href="#" class="hover:text-[#C8A96B] transition">
-              Collections
-            </a>
-
-            <a href="#" class="hover:text-[#C8A96B] transition">
+            <a href="explore.html" class="hover:text-[#C8A96B] transition">
               About
             </a>
 
@@ -817,11 +847,11 @@
 
           <div class="flex flex-col gap-4 text-gray-300 text-sm">
 
-            <a href="#Instagram" target="_blank" class="hover:text-[#C8A96B] transition">
+            <a href="#" target="_blank" class="hover:text-[#C8A96B] transition">
               Instagram
             </a>
 
-            <a href="#TikTok" target="_blank" class="hover:text-[#C8A96B] transition">
+            <a href="#" target="_blank" class="hover:text-[#C8A96B] transition">
               TikTok
             </a>
 
@@ -861,16 +891,7 @@
   </footer>
 
   <!-- JAVASCRIPT -->
-  <script>
-
-    // MOBILE MENU TOGGLE
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("active");
-    });
-
+  <script src="trp.js">
   </script>
 
 </body>
