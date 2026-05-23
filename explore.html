@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>TRP | About</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    body{
+      background:#0D0D0D;
+      font-family:'Poppins',sans-serif;
+      overflow-x:hidden;
+    }
+
+    .heading-font{
+      font-family:'Cinzel', serif;
+    }
+
+    .gold-text{
+      color:#C8A96B;
+    }
+
+    .purple-glow{
+      box-shadow:0 0 25px rgba(90,24,154,0.4);
+    }
+
+    .cta-btn {
+      transition: all 0.4s ease;
+    }
+
+    .cta-btn:hover {
+      background: #5A189A;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(90, 24, 154, 0.7);
+    }
+
+    /* MOBILE MENU ANIMATION */
+    .mobile-menu {
+      transition: all 0.4s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .mobile-menu.active {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0D0D0D;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #5A189A;
+      border-radius: 20px;
+    }
+
+    /* INITIAL STATE */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+  }
+
+  /* WHEN VISIBLE */
+  .animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  </style>
+</head>
+
+<body class="text-white">
+<!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-[#1c1c1c]">
+
+        <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
+
+            <!-- LOGO -->
+            <div class="flex items-center gap-3">
+
+            <img
+                src="Images/RP LOGO.jpeg"
+                alt="TRP Logo"
+                class="w-10 h-10 object-cover rounded-full border border-[#C8A96B]"
+            >
+
+            <h1 class="heading-font text-sm sm:text-lg md:text-xl gold-text tracking-wide">
+                The Royal Priest
+            </h1>
+
+            </div>
+
+            <!-- DESKTOP NAV -->
+            <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-[3px]">
+
+            <a href="index.html" class="hover:text-[#C8A96B] transition duration-300">
+                Home
+            </a>
+
+            <a href="shop.html" class="hover:text-[#C8A96B] transition duration-300">
+                Shop
+            </a>
+
+            <a href="explore.html" class="text-[#C8A96B]">
+                Explore
+            </a>
+
+            <a href="#contact" class="hover:text-[#C8A96B] transition duration-300">
+                Contact
+            </a>
+
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button
+            id="menu-btn"
+            class="md:hidden flex flex-col gap-1"
+            >
+
+            <span class="w-6 h-[2px] bg-[#C8A96B]"></span>
+            <span class="w-6 h-[2px] bg-[#C8A96B]"></span>
+            <span class="w-6 h-[2px] bg-[#C8A96B]"></span>
+
+            </button>
+
+        </div>
+
+    <!-- MOBILE MENU -->
+        <div
+            id="mobile-menu"
+            class="mobile-menu md:hidden bg-[#111111] border-t border-[#222]"
+        >
+
+            <div class="flex flex-col px-6 py-6 gap-6 uppercase tracking-[3px] text-sm">
+
+            <a href="index.html" class="hover:text-[#C8A96B] transition">
+                Home
+            </a>
+
+            <a href="shop.html" class="hover:text-[#C8A96B] transition">
+                Shop
+            </a>
+
+            <a href="explore.html" class="text-[#C8A96B]">
+                Explore
+            </a>
+
+            <a href="#contact" class="hover:text-[#C8A96B] transition">
+                Contact
+            </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+<!-- HERO -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-30">
+
+  <!-- BACKGROUND IMAGE -->
+  <img
+    src="Images/zipper shirt.png"
+    class="absolute inset-0 w-full h-full object-cover opacity-60"
+  >
+
+  <!-- DARK OVERLAY -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- CONTENT -->
+  <div class="relative z-10 text-center px-6 max-w-4xl">
+
+    <p class="uppercase tracking-[6px] text-md gold-text mb-6">
+      <i>THE ROYAL PRIEST</i>
+    </p>
+
+    <h1 class="heading-font text-5xl md:text-7xl leading-tight mb-8">
+
+      BUILT FOR <br>
+      THOSE WHO <span class="gold-text">LEAD</span>
+
+    </h1>
+
+    <p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
+
+      A luxury fashion identity crafted for individuals
+      who move differently, think differently,
+      and elevate culture through style.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- BRAND STORY -->
+<section class="py-24 px-6 md:px-10">
+
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- IMAGE -->
+    <div>
+
+      <img
+        src="Images/pur and gold.jpg"
+        class="rounded-[30px] w-full h-[600px] object-cover purple-glow"
+      >
+
+    </div>
+
+    <!-- TEXT -->
+    <div>
+
+      <p class="gold-text uppercase tracking-[6px] text-sm mb-6">
+        OUR STORY
+      </p>
+
+      <h2 class="heading-font text-4xl md:text-5xl leading-tight mb-8">
+
+        More Than Fashion. <br>
+        A Lifestyle.
+
+      </h2>
+
+      <p class="text-gray-400 leading-relaxed mb-6">
+
+        THE ROYAL PRIEST was created to redefine
+        modern luxury fashion through timeless silhouettes,
+        elevated craftsmanship and identity.
+
+      </p>
+
+      <p class="text-gray-400 leading-relaxed">
+
+        Every piece is designed to embody confidence,
+        exclusivity and individuality 
+        crafted for those who refuse ordinary.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BRAND VALUES -->
+<section class="py-24 px-6 md:px-10 bg-[#111111]">
+
+  <div class="max-w-7xl mx-auto text-center">
+
+    <p class="gold-text uppercase tracking-[6px] text-sm mb-6">
+      Philosophy
+    </p>
+
+    <h2 class="heading-font text-4xl md:text-5xl mb-16">
+
+      The Foundation Of TRP
+
+    </h2>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+      <div class="bg-[#181818] p-10 rounded-[30px] border border-[#222]">
+
+        <h3 class="heading-font text-2xl gold-text mb-4">
+          Royalty
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Designed to inspire confidence,
+          elevation and self-worth.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-[#181818] p-10 rounded-[30px] border border-[#222]">
+
+        <h3 class="heading-font text-2xl gold-text mb-4">
+          Timelessness
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Fashion beyond temporary trends.
+          Built to remain relevant.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-[#181818] p-10 rounded-[30px] border border-[#222]">
+
+        <h3 class="heading-font text-2xl gold-text mb-4">
+          Culture
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          A reflection of identity,
+          expression and modern luxury.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="py-32 px-6 text-center">
+
+  <p class="gold-text uppercase tracking-[6px] text-sm mb-6">
+    Enter The Culture
+  </p>
+
+  <h2 class="heading-font text-4xl md:text-6xl leading-tight mb-8">
+
+    Ready To Elevate <br>
+    Your Style?
+
+  </h2>
+
+  <button
+    onclick="window.location.href='shop_page.html'"
+    class="bg-[#5A189A] hover:bg-[#6B21A8] transition px-10 py-5 rounded-full uppercase tracking-[4px] text-sm purple-glow"
+  >
+    Shop Collection
+  </button>
+
+</section>
+
+<!-- JAVASCRIPT -->
+  <script src="trp.js">
+  </script>
+</body>
+</html>
