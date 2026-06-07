@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TRP | SHOP</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Heading Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Body Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0D0D0D;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .heading-font {
+      font-family: 'Cinzel', serif;
+    }
+
+    .gold-text {
+      color: #C8A96B;
+    }
+
+    .purple-outline {
+      text-shadow:
+        0 0 5px rgba(90, 24, 154, 0.7),
+        0 0 10px rgba(90, 24, 154, 0.4);
+    }
+
+    .purple-glow {
+      box-shadow: 0 0 20px rgba(90, 24, 154, 0.35);
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(90, 24, 154, 0.18);
+      filter: blur(120px);
+      border-radius: 9999px;
+      z-index: 0;
+    }
+
+    .gold-border {
+      border: 1px solid #C8A96B;
+    }
+
+    .cta-btn {
+      transition: all 0.4s ease;
+    }
+
+    .cta-btn:hover {
+      background: #5A189A;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(90, 24, 154, 0.7);
+    }
+
+    /* MOBILE MENU ANIMATION */
+    .mobile-menu {
+      transition: all 0.4s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .mobile-menu.active {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0D0D0D;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #5A189A;
+      border-radius: 20px;
+    }
+
+    /* INITIAL STATE */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+  }
+
+  /* WHEN VISIBLE */
+  .animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  </style>
+</head>
+
+<body class="text-white">
+
+<!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-[#1c1c1c]">
+
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+
+        <img
+          src="Images/RP LOGO.jpeg"
+          alt="TRP Logo"
+          class="w-10 h-10 object-cover rounded-full border border-[#C8A96B]"
+        >
+
+        <h1 class="heading-font text-sm sm:text-lg md:text-xl gold-text tracking-wide">
+          The Royal Priest
+        </h1>
+
+      </div>
+
+      <!-- DESKTOP NAV -->
+      <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-[3px]">
+
+        <a href="index.html" class="hover:text-[#C8A96B] transition duration-300">
+          Home
+        </a>
+
+        <a href="shop_page.html" class="hover:text-[#C8A96B] transition duration-300">
+          Shop
+        </a>
+
+        <a href="cart.html" class="text-[#C8A96B] transition duration-300">
+          Cart
+        </a>
+
+
+        <a href="about.html" class="hover:text-[#C8A96B] transition duration-300">
+          About
+        </a>
+
+        <a href="index.html#Contacts" class="hover:text-[#C8A96B] transition duration-300">
+          Contact
+        </a>
+
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        id="menu-btn"
+        class="md:hidden flex flex-col gap-1"
+      >
+
+        <span class="w-6 h-[2px] bg-[#C8A96B]"></span>
+        <span class="w-6 h-[2px] bg-[#C8A96B]"></span>
+        <span class="w-6 h-[2px] bg-[#C8A96B]"></span>
+
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu md:hidden bg-[#111111] border-t border-[#222]"
+    >
+
+      <div class="flex flex-col px-6 py-6 gap-6 uppercase tracking-[3px] text-sm">
+
+        <a href="index.html" class="hover:text-[#C8A96B] transition">
+          Home
+        </a>
+
+        <a href="shop_page.html" class="hover:text-[#C8A96B] transition">
+          Shop
+        </a>
+
+        <a href="cart.html" class="text-[#C8A96B] transition duration-300">
+          Cart
+        </a>
+
+        <a href="about.html" class="hover:text-[#C8A96B] transition">
+          About
+        </a>
+
+        <a href="index.html#Contacts" class="hover:text-[#C8A96B] transition">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  
+
+<section class="max-w-6xl mx-auto py-24 px-5">
+    
+    <h1 class="text-5xl mb-12 flex items-center gap-4">
+      <a href="shop_page.html"
+         class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-purple-500/30 hover:scale-110 transition duration-300">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 text-purple-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="3">
+
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+            />
+
+        </svg>
+
+      </a>
+      <span>Shopping Cart</span>
+    </h1>
+
+    <div id="cart-items"></div>
+
+    <div class="mt-10 text-right">
+        <h2 class="text-3xl">Total: <span id="cart-total">₦0</span></h2>
+        <button id="checkout-btn" class="cta-btn mt-6 bg-[#5A189A] px-6 py-3 rounded-full">
+            Checkout
+        </button>
+    </div>
+
+</section>
+<script src="trp.js"></script>
+</body>
+</html>
