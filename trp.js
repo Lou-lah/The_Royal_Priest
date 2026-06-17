@@ -448,6 +448,6 @@ if (checkoutBtn) {
     message += `\nTotal: ₦${total.toLocaleString()}`;
 
     window.location.href =
-      `https://wa.me/2348157996371?text=${encodeURIComponent(message)}`;
+      `https://wa.me/2348077278398?text=${encodeURIComponent(message)}`;
   });
 }
